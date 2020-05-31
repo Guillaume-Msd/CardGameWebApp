@@ -31,13 +31,13 @@ public class UserEntity {
 	private Integer money;
 	
 	
-	public UserEntity() throws IOException {
+	public UserEntity() {
 		this.money = 5000;
 
 		
 	}
 	
-	public UserEntity(String Name, String Surname, String Password) throws IOException {
+	public UserEntity(String Name, String Surname, String Password) {
 		this.name = Name;
 		this.surname  = Surname;
 		this.password = Password;

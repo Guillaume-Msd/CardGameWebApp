@@ -19,7 +19,7 @@ import card.model.CardEntity;
 public class CardRepositoryTest {
 
     @Autowired
-    UserRepository cRepo;
+    CardRepository cRepo;
 
     @Before
     public void setUp() {

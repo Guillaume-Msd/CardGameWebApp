@@ -15,7 +15,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import card.model.CardEntity;
-import card.repository.UserRepository;
+import card.repository.CardRepository;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(value = CardService.class)
@@ -25,7 +25,7 @@ public class CardServiceTest {
 	private CardService cService;
 
 	@MockBean
-	private UserRepository cRepo;
+	private CardRepository cRepo;
 	
 	CardEntity tmpCard = new CardEntity("kassa", "kassadin.jpeg", "that's a lot of damage", 50, 0);
 	
