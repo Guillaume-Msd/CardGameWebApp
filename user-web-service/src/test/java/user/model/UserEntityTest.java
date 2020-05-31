@@ -2,7 +2,6 @@ package user.model;
 
 import static org.junit.Assert.assertTrue;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +29,7 @@ public class UserEntityTest {
 	}
 
 	@Test
-	public void createUser() throws IOException {
+	public void createUser() {
 		System.out.println("[TEST1]");
 		for(String msg:stringList) {
 			for(String msg2:stringList) {
@@ -47,7 +46,7 @@ public class UserEntityTest {
 	}
 	
 	@Test
-	public void displayUser() throws IOException {
+	public void displayUser() {
 		System.out.println("[TEST2]");
 		String name = "Lucas";
 		String surname = "Bérard";

@@ -2,7 +2,6 @@ package user.repository;
 
 import static org.junit.Assert.assertTrue;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.junit.After;
@@ -24,7 +23,7 @@ public class UserRepositoryTest {
     UserRepository uRepo;
 
     @Before
-    public void setUp() throws IOException {
+    public void setUp() {
     	System.out.println("[BEFORE TEST]");
 		String name = "Lucas";
 		String surname = "Bérard";
@@ -40,7 +39,7 @@ public class UserRepositoryTest {
     }
 
     @Test
-    public void finds() throws IOException {
+    public void finds() {
     	System.out.println("[TEST1]");
         List<UserEntity> UserList = uRepo.findAll();
         assertTrue(UserList.size() == 1);
