@@ -45,13 +45,29 @@ public class CardEntityTest {
 					for(Integer msg4:intList) {
 						for(Integer msg5:intList) {
 							CardEntity h=new CardEntity(msg, msg2, msg3, msg4, msg5);
-							System.out.println("msg:"+msg+", msg2:"+msg2+", msg3:"+msg3+", msg4:"+msg4);
+							//System.out.println("msg:"+msg+", msg2:"+msg2+", msg3:"+msg3+", msg4:"+msg4);
 							assertTrue(h.getName() == msg);
 							assertTrue(h.getImgUrl() == msg2);
 							assertTrue(h.getDescription() == msg3);
 							assertTrue(h.getAttack() == msg4);
 							assertTrue(h.getDefence() == msg5);
-						}
+							h.setAttack(5);
+							h.setDefence(5);
+							h.setDescription("description");
+							h.setId(3);
+							h.setImgUrl("image.png");
+							h.setName("Trynda");
+							h.setPrice(500);
+							h.setUserId("3");
+							assertTrue(h.getName() == "Trynda");
+							assertTrue(h.getImgUrl() == "image.png");
+							assertTrue(h.getDescription() == "description");
+							assertTrue(h.getAttack() == 5);
+							assertTrue(h.getDefence() == 5);	
+							assertTrue(h.getId() == 3);	
+							assertTrue(h.getPrice() == 500);	
+							assertTrue(h.getUserId() == "3");	
+							}
 					}	
 				}	
 			}
@@ -71,4 +87,17 @@ public class CardEntityTest {
 		String expectedResult="Card Name : " + name + "\n " + "Card Description : " + description + "\n \n";;
 		assertTrue(h.toString().equals(expectedResult));
 	}
+	
+	@Test
+	public void listCard() {
+		System.out.println("[TEST3]");
+		CardFactory cf = new CardFactory();
+		List<CardEntity> cardlist = cf.testCards();
+		assertTrue(cf.getnames().length == cardlist.size());
+		String[] str = {"Trynda"};
+		cf.setnames(str);
+		assertTrue(cf.getnames() == str);
+	}
 }
+
+	
